@@ -1,10 +1,11 @@
 # GTalk - Google AI Mode Terminal Query Tool
 
-A powerful command-line interface to interact with Google's AI Mode directly from your terminal. Get AI-powered answers, code examples, and explanations without leaving your command line!
+A powerful command-line interface to interact with Google's AI Mode directly from your terminal. Get AI-powered context aware answers, code examples, and explanations without leaving your command line!
 
 ## Features
 
 - **Interactive Mode** - Keep querying without restarting
+- **Context Aware** - Context aware subsequent query in interactive mode
 - **Code Block Support** - Properly formatted code examples
 - **Fast** - Browser session reused across queries
 - **Clean Output** - Well-formatted, readable responses
