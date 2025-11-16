@@ -82,6 +82,7 @@ class GoogleAIMode:
         try:
             if self.driver is None:
                 self.init_driver()
+                time.sleep(1)
 
             # ----- Memory prefix -----
             memory_part = f"Previous summary: {self.memory}. " if self.memory else ""
@@ -95,7 +96,7 @@ class GoogleAIMode:
             final_query_text = f"{memory_part}{trick} Users query: {raw_query}"
 
             encoded = urllib.parse.quote_plus(final_query_text)
-            url = f"https://www.google.com/search?udm=50&aep=11&q={encoded}"
+            url = f"https://www.google.com/search?udm=50&aep=11&hl=en&lr=lang_en&q={encoded}"
 
             print("🔍 Searching...")
             self.driver.get(url)
