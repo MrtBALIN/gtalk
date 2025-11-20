@@ -5,7 +5,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 
 setup(
     name="gtalk",
-    version="1.0.9",
+    version="2.0.0",
     license="MIT",
     maintainer="Md. Sazzad Hissain Khan",
     maintainer_email="hissain.khan@gmail.com",

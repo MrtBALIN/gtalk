@@ -172,7 +172,10 @@ class GoogleAIMode:
         result = []
 
         # Combined selector for all relevant content types
-        content_elements = main_container.select('div.r1PmQe, ul.KsbFXc, div.Y3BBE, div.AdPoic, span.T286Pc')
+        if self.short_mode:
+            content_elements = main_container.select('div.Y3BBE')
+        else:
+            content_elements = main_container.select('div.r1PmQe, ul.KsbFXc, div.Y3BBE, div.AdPoic, span.T286Pc')
 
         for element in content_elements:
             # Handle code blocks
@@ -660,7 +663,7 @@ Examples:
             ai.query(q)
 
     except KeyboardInterrupt:
-        print("\n\n👋 Interrupted. Goodbye!")
+        print("\n\nInterrupted. Goodbye!")
 
     finally:
         ai.close()
@@ -710,7 +713,7 @@ if __name__ == "__main__":
             ai = GoogleAIMode(verbose=args.verbose, short_mode=args.short)
             try:
                 if not args.verbose:
-                    print(f"Query: {stdin_text}\n")
+                    print(f"Query: {stdin_text}")
                 ai.init_driver()
                 ai.query(stdin_text)
             finally:
